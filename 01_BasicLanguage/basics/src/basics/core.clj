@@ -10,9 +10,28 @@
   (+ x 1)
 )
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
+(defn header []
+  (println "")
+  (println "******************************")
+  (println "")
+)
+
+(defn footer []
+  (println "")
+  (println "**************END**************")
+  (println "")
+)
+
+"Basic data types"
+(defn basic_types []
+  (header)
+  (println "Basic Data Types in Clojure")
+  (println "mod 23 2" " = " (mod 23 2))
+  (footer)
+)
+
+(defn baisc_expressions []
+  (header)
   (println "Expression (+ 2 3) result should be 5" " = " (+ 2 3))
   (println "Nested (* (+ 1 1) 3) result should be 6" " = " (* (+ 1 1) 3))
   (println "Nested (* (+ 1 1) (- 7 (* 2 2))) result should be 6" " = " (* (+ 1 1) (- 7 (* 2 2))))
@@ -26,5 +45,13 @@
   (println "Call a function foo with arg 5" " = " (foo 5))
 
   (def inc_x (increment x))
-  (println "Value of incremented x is" inc_x)
+  (println "Value of incremented x is" inc_x)  
+  (footer)
+)
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (baisc_expressions)
+  (basic_types)
 )
